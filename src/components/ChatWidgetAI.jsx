@@ -1,8 +1,8 @@
-import { useState, useRef, useEffect } from 'react';
-import { motion, AnimatePresence } from 'framer-motion';
-import { FaComments, FaTimes, FaPaperPlane } from 'react-icons/fa';
-import { OpenAI } from "langchain";
-import { BufferMemory } from "langchain/memory";
+import {useState,useRef,useEffect} from 'react';
+import {motion,AnimatePresence} from 'framer-motion';
+import {FaComments,FaTimes,FaPaperPlane} from 'react-icons/fa';
+import {OpenAI} from "langchain";
+import {BufferMemory} from "langchain/memory";
 
 const memory = new BufferMemory();
 const model = new OpenAI({
@@ -10,7 +10,7 @@ const model = new OpenAI({
   modelName: "gpt-3.5-turbo"
 });
 
-const ChatWidget = () => {
+const ChatWidgetAI = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState([]);
   const [input, setInput] = useState('');
